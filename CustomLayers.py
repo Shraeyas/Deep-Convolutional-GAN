@@ -23,7 +23,7 @@ class CustomConv2D(Layer):
             self.activation = layers.LeakyReLU(alpha)
         else:
             self.activation = layers.Activation(activation)
-        self.regularization = layers.Dropout(0.3)
+        self.regularization = layers.Dropout(0.2)
 
     def call(self, inputs, training = True):
         x = self.conv2d(inputs)
